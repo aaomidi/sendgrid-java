@@ -3,13 +3,11 @@ sudo: false
 matrix:
   include:
     - os: linux
-      dist: precise
       jdk: openjdk7
     - os: linux
-      dist: precise
-      jdk: oraclejdk7
+      jdk: openjdk8
     - os: linux
-      jdk: oraclejdk8
+      jdk: openjdk9
 after_script:
 - "./gradlew build"
 - "./scripts/upload.sh"
